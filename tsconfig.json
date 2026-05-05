@@ -1,0 +1,9 @@
+{
+  "extends": "./template/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-native",
+    "typeRoots": ["./template/node_modules/@types"]
+  },
+  "include": ["template/**/*"],
+  "exclude": ["template/node_modules"]
+}
