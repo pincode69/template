@@ -28,7 +28,7 @@ export function AboutAppScreen({ navigation }: Props) {
       </View>
       <Text style={styles.body}>
         This screen is a starter template. Add your team, support links, privacy policy,
-        and licenses here. Hook Amplitude or your analytics from a single place if needed.
+        and licenses here. Plug in analytics when you add a vendor.
       </Text>
       <Pressable style={styles.button} onPress={() => navigation.goBack()}>
         <Text style={styles.buttonText}>Back</Text>

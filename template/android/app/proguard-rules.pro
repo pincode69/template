@@ -16,15 +16,5 @@
 # AsyncStorage
 -keep class com.reactnativecommunity.asyncstorage.** { *; }
 
-# safe-area, InAppBrowser
+# safe-area-context
 -keep class com.th3rdwave.safeareacontext.** { *; }
--keep class com.proyecto26.inappbrowser.** { *; }
--keep class androidx.browser.** { *; }
-
-# AppsFlyer
--keep class com.appsflyer.** { *; }
--keep class com.android.installreferrer.** { *; }
--dontwarn com.appsflyer.**
-
-# Amplitude
--keep class com.amplitude.** { *; }
