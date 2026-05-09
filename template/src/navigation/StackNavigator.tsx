@@ -2,7 +2,14 @@ import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { DetailsScreen, HomeScreen } from '../screens';
+import {
+  AboutAppScreen,
+  AchievementsScreen,
+  DailyRewardsScreen,
+  DetailsScreen,
+  GuideScreen,
+  HomeScreen,
+} from '../screens';
 
 import type { RootStackParamList } from './types';
 
@@ -25,6 +32,26 @@ export function StackNavigator() {
         name="Details"
         component={DetailsScreen}
         options={{ title: 'Details' }}
+      />
+      <Stack.Screen
+        name="AboutApp"
+        component={AboutAppScreen}
+        options={{ title: 'About app' }}
+      />
+      <Stack.Screen
+        name="Guide"
+        component={GuideScreen}
+        options={{ title: 'Guide' }}
+      />
+      <Stack.Screen
+        name="Achievements"
+        component={AchievementsScreen}
+        options={{ title: 'Achievements' }}
+      />
+      <Stack.Screen
+        name="DailyRewards"
+        component={DailyRewardsScreen}
+        options={{ title: 'Daily rewards' }}
       />
     </Stack.Navigator>
   );

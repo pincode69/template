@@ -2,5 +2,5 @@
   "name": "react-native-template-master-template",
   "version": "0.0.1",
   "description": "RN 0.81.5 master template (navigation + metro obfuscation hooks)",
-  "files": ["template", "template.config.js"]
+  "files": ["template", "template.config.js", "README.md"]
 }
