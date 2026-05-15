@@ -1,6 +1,7 @@
-export { AboutAppScreen } from './AboutAppScreen';
-export { AchievementsScreen } from './AchievementsScreen';
-export { DailyRewardsScreen } from './DailyRewardsScreen';
-export { DetailsScreen } from './DetailsScreen';
-export { GuideScreen } from './GuideScreen';
 export { HomeScreen } from './HomeScreen';
+export { DetailsScreen } from './DetailsScreen';
+export { AchievementsScreen } from './AchievementsScreen';
+export { AchievementDetailScreen } from './AchievementDetailScreen';
+export { DailyScreen } from './DailyScreen';
+export { ProfileScreen } from './ProfileScreen';
+export { AboutAppScreen } from './AboutAppScreen';

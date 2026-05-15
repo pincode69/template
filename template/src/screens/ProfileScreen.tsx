@@ -3,20 +3,18 @@ import React from 'react';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import type { AchievementsStackParamList } from '../navigation/types';
+import type { ProfileStackParamList } from '../navigation/types';
 
-type Nav = StackNavigationProp<AchievementsStackParamList, 'AchievementsIndex'>;
+type Nav = StackNavigationProp<ProfileStackParamList, 'ProfileIndex'>;
 
 type Props = { navigation: Nav };
 
-export function AchievementsScreen({ navigation }: Props) {
+export function ProfileScreen({ navigation }: Props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Achievements</Text>
-      <Pressable
-        style={styles.button}
-        onPress={() => navigation.navigate('AchievementDetail', { id: 'first' })}>
-        <Text style={styles.buttonText}>Open Achievement</Text>
+      <Text style={styles.title}>Profile</Text>
+      <Pressable style={styles.button} onPress={() => navigation.navigate('AboutApp')}>
+        <Text style={styles.buttonText}>About</Text>
       </Pressable>
     </View>
   );

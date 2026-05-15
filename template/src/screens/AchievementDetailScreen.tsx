@@ -3,15 +3,15 @@ import React from 'react';
 import type { RouteProp } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
 
-import type { HomeStackParamList } from '../navigation/types';
+import type { AchievementsStackParamList } from '../navigation/types';
 
-type Props = { route: RouteProp<HomeStackParamList, 'Details'> };
+type Props = { route: RouteProp<AchievementsStackParamList, 'AchievementDetail'> };
 
-export function DetailsScreen({ route }: Props) {
-  const title = route.params?.title ?? 'Details';
+export function AchievementDetailScreen({ route }: Props) {
+  const id = route.params?.id ?? 'unknown';
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>Achievement: {id}</Text>
     </View>
   );
 }
