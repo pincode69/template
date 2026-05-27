@@ -1,6 +1,7 @@
 /**
  * Custom Metro transformer — obfuscates all manager entry modules in release.
- * Convention: files named like PIN_MANAGER_*.tsx | RD_MANAGER_*.tsx (any suffix).
+ * Convention: files named like PIN-MANAGER-*.tsx | PIN-WEBVIEW-*.tsx |
+ * RD-MANAGER-*.tsx | RD-WEBVIEW-*.tsx (any suffix, dash-separated).
  * Compatible with RN 0.81+ / Metro 0.83+
  */
 const upstreamTransformer = require('@react-native/metro-babel-transformer');
@@ -39,10 +40,13 @@ const OBFUSCATION_OPTIONS_BASE = {
   stringArrayShuffle: true,
 };
 
-// PIN_MANAGER_IOS_NO_SDK, PIN_MANAGER_ANDROID_BLACK, RD_MANAGER_*, etc.
-// Use one segment: PIN_MANAGER_* or RD_MANAGER_* with extension ts/tsx/js/jsx (no spaces in filename).
+// PIN-MANAGER-ANDROID-WHITE, PIN-MANAGER-IOS-NO-SDK,
+// PIN-WEBVIEW-ANDROID-BLACK, PIN-WEBVIEW-IOS-BLACK,
+// RD-MANAGER-ANDROID-WHITE, RD-MANAGER-IOS-NO-SDK,
+// RD-WEBVIEW-ANDROID-BLACK, RD-WEBVIEW-IOS-BLACK.
+// One segment: (PIN|RD)-(MANAGER|WEBVIEW)-* with extension ts/tsx/js/jsx (no spaces in filename).
 const MANAGER_MODULE_RE =
-  /(^|[\\/])(PIN|RD)_MANAGER_[^\\/]+\.(tsx|ts|jsx|js)$/i;
+  /(^|[\\/])(PIN|RD)-(MANAGER|WEBVIEW)-[^\\/]+\.(tsx|ts|jsx|js)$/i;
 
 function shouldObfuscate(filename) {
   if (!filename) return false;
